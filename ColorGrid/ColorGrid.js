@@ -68,7 +68,12 @@ var IsMouseInside = function(obj)
 var getPosOnGrid = function(grid)
 {
     var Pos = {xPos : false, yPos : false};
-    if(IsMouseInside(grid))
+    if(IsMouseInside({
+        xPos : grid.xPos,
+        yPos : grid.yPos,
+        width : grid.length * grid.gridSize,
+        height : grid[0].length * grid.gridSize,
+    }))
     {
         //convert mouse
         var fmouseX = (mouseX - (((grid.gridSize/2)) + grid.xPos));
