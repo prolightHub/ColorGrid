@@ -2280,13 +2280,13 @@ mouseReleased = function()
 var lastMouseDragged = mouseDragged;
 mouseDragged = function()
 {
-    lastMouseDragged();
+   // lastMouseDragged();
     scenes.mouseDragged(scenes.scene);
 };
 var lastMouseOut = mouseOut;
 mouseOut = function()
 {
-    mouseOut();
+    lastMouseOut();
     scenes.mouseOut(scenes.scene);
 };
 var lastKeyPressedFunc = keyPressed;
